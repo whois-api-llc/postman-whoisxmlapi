@@ -1,0 +1,1067 @@
+{
+	"info": {
+		"_postman_id": "9a966b46-025c-415d-90b5-f72c233aedcc",
+		"name": "Threat Intelligence Platform APIs",
+		"description": "This is a Postman Collection for the Threat Intelligence Platform endpoints.\n\nRefer to the [Threat Intelligence Platform website](https://threatintelligenceplatform.com/threat-intelligence-api-docs/general-information) for more details.\n\nIf you have an API-related question, you can ask them here: [https://threatintelligenceplatform.com/#contact-us](https://threatintelligenceplatform.com/#contact-us)\n\n## Installation\n\n### Manual install\n\nYou can download this Collection from a GitHub repo here: [https://github.com/whois-api-llc/postman-whoisxmlapi](https://github.com/whois-api-llc/postman-whoisxmlapi)\n\n## Environment\n\nThis Collection includes a pre-configured Environment. You will need to set up the following variables in order to run each request:\n\n| Name | Description |\n| --- | --- |\n| `api_key` | Your API key |",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24477665"
+	},
+	"item": [
+		{
+			"name": "Connected Domains API",
+			"item": [
+				{
+					"name": "Get a list of domains resolving to an IP",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.threatintelligenceplatform.com/v1/connectedDomains?domainName=threatintelligenceplatform.com",
+							"protocol": "https",
+							"host": [
+								"api",
+								"threatintelligenceplatform",
+								"com"
+							],
+							"path": [
+								"v1",
+								"connectedDomains"
+							],
+							"query": [
+								{
+									"key": "domainName",
+									"value": "threatintelligenceplatform.com",
+									"description": "The target domain name."
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get a list of domains resolving to an IP",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://api.threatintelligenceplatform.com/v1/connectedDomains?domainName=threatintelligenceplatform.com",
+									"protocol": "https",
+									"host": [
+										"api",
+										"threatintelligenceplatform",
+										"com"
+									],
+									"path": [
+										"v1",
+										"connectedDomains"
+									],
+									"query": [
+										{
+											"key": "domainName",
+											"value": "threatintelligenceplatform.com",
+											"description": "The target domain name."
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.8"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 28 Nov 2022 15:55:17 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "99"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"numberOfDomains\": 3,\n  \"domains\":[\n    \"domainnamestat.com\",\n    \"threatintelligenceplatform.com\",\n    \"tip-intel.com\"\n  ]\n}"
+						}
+					]
+				}
+			],
+			"description": "Connected Domains API allows you to retrieve a list of domain names resolving to a given IP address, including subdomains.\n\nFull API documentation is available [here](https://threatintelligenceplatform.com/threat-intelligence-api-docs/reverse-ip-lookup-api)."
+		},
+		{
+			"name": "Domain Malware Check API",
+			"item": [
+				{
+					"name": "Check if a domain is considered dangerous",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.threatintelligenceplatform.com/v1/malwareCheck?domainName=threatintelligenceplatform.com",
+							"protocol": "https",
+							"host": [
+								"api",
+								"threatintelligenceplatform",
+								"com"
+							],
+							"path": [
+								"v1",
+								"malwareCheck"
+							],
+							"query": [
+								{
+									"key": "domainName",
+									"value": "threatintelligenceplatform.com",
+									"description": "The target domain name."
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Check if a domain is considered dangerous",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://api.threatintelligenceplatform.com/v1/malwareCheck?domainName=2uts.com",
+									"protocol": "https",
+									"host": [
+										"api",
+										"threatintelligenceplatform",
+										"com"
+									],
+									"path": [
+										"v1",
+										"malwareCheck"
+									],
+									"query": [
+										{
+											"key": "domainName",
+											"value": "2uts.com",
+											"description": "The target domain name."
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.8"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 28 Nov 2022 16:03:51 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "99"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"safeScore\": 81.25,\n    \"warningDetails\": [\n        \"Malware\"\n    ]\n}"
+						}
+					]
+				}
+			],
+			"description": "Domain Malware Check API, for a given domain name, checks if it is considered dangerous in different security data sources.\n\nFull API documentation is available [here](https://threatintelligenceplatform.com/threat-intelligence-api-docs/domain-malware-check-api)."
+		},
+		{
+			"name": "Domain Reputation API v1",
+			"item": [
+				{
+					"name": "Get a domain reputation score",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.threatintelligenceplatform.com/v1/reputation?domainName=threatintelligenceplatform.com",
+							"protocol": "https",
+							"host": [
+								"api",
+								"threatintelligenceplatform",
+								"com"
+							],
+							"path": [
+								"v1",
+								"reputation"
+							],
+							"query": [
+								{
+									"key": "domainName",
+									"value": "threatintelligenceplatform.com",
+									"description": "The target domain name or IPv4 address."
+								},
+								{
+									"key": "mode",
+									"value": "",
+									"description": "TIP can check the domain specified in two modes: \"fast\" (default): only select test codes will run — i.e., 62 WHOIS Domain status, 82 Malware Databases check, 87 SSL certificate validity, and 93 WHOIS Domain check—while other tests and data collectors will be disabled. \"full\": All tests will be performed, similar to what the TIP GUI displays.",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get a reputation score in fast mode",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://api.threatintelligenceplatform.com/v1/reputation?domainName=threatintelligenceplatform.com",
+									"protocol": "https",
+									"host": [
+										"api",
+										"threatintelligenceplatform",
+										"com"
+									],
+									"path": [
+										"v1",
+										"reputation"
+									],
+									"query": [
+										{
+											"key": "domainName",
+											"value": "threatintelligenceplatform.com",
+											"description": "The target domain name or IPv4 address."
+										},
+										{
+											"key": "mode",
+											"value": "",
+											"description": "TIP can check the domain specified in two modes: \"fast\" (default): only select test codes will run — i.e., 62 WHOIS Domain status, 82 Malware Databases check, 87 SSL certificate validity, and 93 WHOIS Domain check—while other tests and data collectors will be disabled. \"full\": All tests will be performed, similar to what the TIP GUI displays.",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.8"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 28 Nov 2022 16:15:18 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "99"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"mode\": \"fast\",\n    \"reputationScore\": 98.58,\n    \"testResults\": [\n        {\n            \"test\": \"SSL vulnerabilities\",\n            \"testCode\": 88,\n            \"warnings\": [\n                \"HTTP Strict Transport Security not set\",\n                \"TLSA record not configured or configured wrong\",\n                \"OCSP stapling not configured\"\n            ],\n            \"warningCodes\": [\n                6015,\n                6019,\n                6021\n            ]\n        }\n    ]\n}"
+						},
+						{
+							"name": "Get a reputation score in full mode",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://api.threatintelligenceplatform.com/v1/reputation?domainName=threatintelligenceplatform.com&mode=full",
+									"protocol": "https",
+									"host": [
+										"api",
+										"threatintelligenceplatform",
+										"com"
+									],
+									"path": [
+										"v1",
+										"reputation"
+									],
+									"query": [
+										{
+											"key": "domainName",
+											"value": "threatintelligenceplatform.com",
+											"description": "The target domain name or IPv4 address."
+										},
+										{
+											"key": "mode",
+											"value": "full",
+											"description": "TIP can check the domain specified in two modes: \"fast\" (default): only select test codes will run — i.e., 62 WHOIS Domain status, 82 Malware Databases check, 87 SSL certificate validity, and 93 WHOIS Domain check—while other tests and data collectors will be disabled. \"full\": All tests will be performed, similar to what the TIP GUI displays."
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.8"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 28 Nov 2022 16:17:17 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "99"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"mode\": \"full\",\n    \"reputationScore\": 74.13,\n    \"testResults\": [\n        {\n            \"test\": \"SOA record configuration check\",\n            \"testCode\": 84,\n            \"warnings\": [\n                \"Although the serial number is valid, it's not following the general convention: 2292107415\",\n                \"The expire interval is 604800. Recommended range is [1209600 .. 2419200]\"\n            ],\n            \"warningCodes\": [\n                1019,\n                1022\n            ]\n        },\n        {\n            \"test\": \"Mail servers configuration check\",\n            \"testCode\": 80,\n            \"warnings\": [\n                \"The following mail servers use the same IPv6 address: 2607:f8b0:400e:c00::1a - alt2.aspmx.l.google.com, aspmx3.googlemail.com\",\n                \"The top priority mail server is ASPMX.L.GOOGLE.com, but TTL is not equal to the recommended value (86400)\"\n            ],\n            \"warningCodes\": [\n                5018,\n                5020\n            ]\n        },\n        {\n            \"test\": \"Real-time blackhole check\",\n            \"testCode\": 32,\n            \"warnings\": [\n                \"Mail server alt2.aspmx.l.google.com listed on zen.spamhaus.org\",\n                \"Mail server aspmx2.googlemail.com listed on cbl.abuseat.org\",\n                \"Mail server aspmx.l.google.com listed on zen.spamhaus.org\",\n                \"Mail server alt1.aspmx.l.google.com listed on cbl.abuseat.org\"\n            ],\n            \"warningCodes\": [\n                5001\n            ]\n        },\n        {\n            \"test\": \"SSL vulnerabilities\",\n            \"testCode\": 88,\n            \"warnings\": [\n                \"HTTP Strict Transport Security not set\",\n                \"TLSA record not configured or configured wrong\",\n                \"OCSP stapling not configured\"\n            ],\n            \"warningCodes\": [\n                6015,\n                6019,\n                6021\n            ]\n        }\n    ]\n}"
+						}
+					]
+				}
+			],
+			"description": "This endpoint allows you to evaluate a domain's reputation based on numerous security data sources and the instant host's audit procedure.\n\nFull API documentation is available [here](https://threatintelligenceplatform.com/threat-intelligence-api-docs/domain-reputation-api)."
+		},
+		{
+			"name": "Domain Reputation API v2",
+			"item": [
+				{
+					"name": "Get a domain reputation score",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.threatintelligenceplatform.com/v2/reputation?domainName=threatintelligenceplatform.com",
+							"protocol": "https",
+							"host": [
+								"api",
+								"threatintelligenceplatform",
+								"com"
+							],
+							"path": [
+								"v2",
+								"reputation"
+							],
+							"query": [
+								{
+									"key": "domainName",
+									"value": "threatintelligenceplatform.com",
+									"description": "The target domain name or IPv4 address."
+								},
+								{
+									"key": "mode",
+									"value": "",
+									"description": "TIP can check the domain specified in two modes: \"fast\" (default): only select test codes will run — i.e., 62 WHOIS Domain status, 82 Malware Databases check, 87 SSL certificate validity, and 93 WHOIS Domain check—while other tests and data collectors will be disabled. \"full\": All tests will be performed, similar to what the TIP GUI displays.",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get a reputation score in fast mode",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://api.threatintelligenceplatform.com/v2/reputation?domainName=threatintelligenceplatform.com&mode=fast",
+									"protocol": "https",
+									"host": [
+										"api",
+										"threatintelligenceplatform",
+										"com"
+									],
+									"path": [
+										"v2",
+										"reputation"
+									],
+									"query": [
+										{
+											"key": "domainName",
+											"value": "threatintelligenceplatform.com",
+											"description": "The target domain name or IPv4 address."
+										},
+										{
+											"key": "mode",
+											"value": "fast",
+											"description": "TIP can check the domain specified in two modes: \"fast\" (default): only select test codes will run — i.e., 62 WHOIS Domain status, 82 Malware Databases check, 87 SSL certificate validity, and 93 WHOIS Domain check—while other tests and data collectors will be disabled. \"full\": All tests will be performed, similar to what the TIP GUI displays."
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.8"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 28 Nov 2022 16:21:34 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "99"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"mode\": \"fast\",\n    \"reputationScore\": 98.58,\n    \"testResults\": [\n        {\n            \"test\": \"SSL vulnerabilities\",\n            \"testCode\": 88,\n            \"warnings\": [\n                {\n                    \"warningDescription\": \"HTTP Strict Transport Security not set\",\n                    \"warningCode\": 6015\n                },\n                {\n                    \"warningDescription\": \"TLSA record not configured or configured wrong\",\n                    \"warningCode\": 6019\n                },\n                {\n                    \"warningDescription\": \"OCSP stapling not configured\",\n                    \"warningCode\": 6006\n                }\n            ]\n        }\n    ]\n}"
+						},
+						{
+							"name": "Get a reputation score in full mode",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://api.threatintelligenceplatform.com/v2/reputation?domainName=threatintelligenceplatform.com&mode=full",
+									"protocol": "https",
+									"host": [
+										"api",
+										"threatintelligenceplatform",
+										"com"
+									],
+									"path": [
+										"v2",
+										"reputation"
+									],
+									"query": [
+										{
+											"key": "domainName",
+											"value": "threatintelligenceplatform.com",
+											"description": "The target domain name or IPv4 address."
+										},
+										{
+											"key": "mode",
+											"value": "full",
+											"description": "TIP can check the domain specified in two modes: \"fast\" (default): only select test codes will run — i.e., 62 WHOIS Domain status, 82 Malware Databases check, 87 SSL certificate validity, and 93 WHOIS Domain check—while other tests and data collectors will be disabled. \"full\": All tests will be performed, similar to what the TIP GUI displays."
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.8"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 28 Nov 2022 16:22:01 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "98"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"mode\": \"full\",\n    \"reputationScore\": 74.13,\n    \"testResults\": [\n        {\n            \"test\": \"SOA record configuration check\",\n            \"testCode\": 84,\n            \"warnings\": [\n                {\n                    \"warningDescription\": \"Although the serial number is valid, it's not following the general convention: 2292107415\",\n                    \"warningCode\": 1018\n                },\n                {\n                    \"warningDescription\": \"The expire interval is 604800. Recommended range is [1209600 .. 2419200]\",\n                    \"warningCode\": 1019\n                }\n            ]\n        },\n        {\n            \"test\": \"Mail servers configuration check\",\n            \"testCode\": 80,\n            \"warnings\": [\n                {\n                    \"warningDescription\": \"The following mail servers use the same IPv6 address: 2404:6800:4008:c15::1b - aspmx2.googlemail.com, alt1.aspmx.l.google.com\",\n                    \"warningCode\": 5020\n                },\n                {\n                    \"warningDescription\": \"The top priority mail server is ASPMX.L.GOOGLE.com, but TTL is not equal to the recommended value (86400)\",\n                    \"warningCode\": 5018\n                }\n            ]\n        },\n        {\n            \"test\": \"Real-time blackhole check\",\n            \"testCode\": 32,\n            \"warnings\": [\n                {\n                    \"warningDescription\": \"Mail server aspmx2.googlemail.com listed on cbl.abuseat.org, zen.spamhaus.org\",\n                    \"warningCode\": 5001\n                },\n                {\n                    \"warningDescription\": \"Mail server aspmx3.googlemail.com listed on cbl.abuseat.org, sbl.spamhaus.org, zen.spamhaus.org\",\n                    \"warningCode\": 5001\n                },\n                {\n                    \"warningDescription\": \"Mail server aspmx.l.google.com listed on sbl.spamhaus.org\",\n                    \"warningCode\": 5001\n                },\n                {\n                    \"warningDescription\": \"Mail server alt1.aspmx.l.google.com listed on sbl.spamhaus.org\",\n                    \"warningCode\": 5001\n                }\n            ]\n        },\n        {\n            \"test\": \"SSL vulnerabilities\",\n            \"testCode\": 88,\n            \"warnings\": [\n                {\n                    \"warningDescription\": \"HTTP Strict Transport Security not set\",\n                    \"warningCode\": 6015\n                },\n                {\n                    \"warningDescription\": \"TLSA record not configured or configured wrong\",\n                    \"warningCode\": 6019\n                },\n                {\n                    \"warningDescription\": \"OCSP stapling not configured\",\n                    \"warningCode\": 6006\n                }\n            ]\n        }\n    ]\n}"
+						}
+					]
+				}
+			],
+			"description": "This endpoint allows you to evaluate a domain's reputation based on numerous security data sources and the instant host's audit procedure.\n\nFull API documentation is available [here](https://threatintelligenceplatform.com/threat-intelligence-api-docs/domain-reputation-api-v2)."
+		},
+		{
+			"name": "Domain's Infrastructure Analysis API",
+			"item": [
+				{
+					"name": "Get domain infrastructure entries",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.threatintelligenceplatform.com/v1/infrastructureAnalysis?domainName=threatintelligenceplatform.com",
+							"protocol": "https",
+							"host": [
+								"api",
+								"threatintelligenceplatform",
+								"com"
+							],
+							"path": [
+								"v1",
+								"infrastructureAnalysis"
+							],
+							"query": [
+								{
+									"key": "domainName",
+									"value": "threatintelligenceplatform.com",
+									"description": "The target domain name."
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get domain infrastructure entries",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://api.threatintelligenceplatform.com/v1/infrastructureAnalysis?domainName=threatintelligenceplatform.com",
+									"protocol": "https",
+									"host": [
+										"api",
+										"threatintelligenceplatform",
+										"com"
+									],
+									"path": [
+										"v1",
+										"infrastructureAnalysis"
+									],
+									"query": [
+										{
+											"key": "domainName",
+											"value": "threatintelligenceplatform.com",
+											"description": "The target domain name."
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.8"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 28 Nov 2022 16:25:02 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "99"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"domainName\": \"threatintelligenceplatform.com\",\n        \"resourceType\": \"web\",\n        \"ipv4\": \"172.67.202.22\",\n        \"geolocation\": {\n            \"city\": \"South Beach\",\n            \"country\": \"US\",\n            \"latitude\": \"37.78298\",\n            \"longitude\": \"-122.38969\",\n            \"postalCode\": \"\",\n            \"region\": \"California\",\n            \"timezone\": \"-08:00\"\n        },\n        \"subnetwork\": {\n            \"name\": \"CLOUDFLARENET\",\n            \"ipAddressesRange\": \"172.67.192.0 - 172.67.207.255\",\n            \"country\": \"US\",\n            \"lastUpdateDate\": \"2021-05-26T00:00:00Z\"\n        }\n    },\n    {\n        \"domainName\": \"threatintelligenceplatform.com\",\n        \"resourceType\": \"web\",\n        \"ipv4\": \"104.21.76.236\",\n        \"geolocation\": {\n            \"city\": \"South Beach\",\n            \"country\": \"US\",\n            \"latitude\": \"37.78298\",\n            \"longitude\": \"-122.38969\",\n            \"postalCode\": \"\",\n            \"region\": \"California\",\n            \"timezone\": \"-08:00\"\n        },\n        \"subnetwork\": {\n            \"name\": \"CLOUDFLARENET\",\n            \"ipAddressesRange\": \"104.21.64.0 - 104.21.79.255\",\n            \"country\": \"US\",\n            \"lastUpdateDate\": \"2021-05-26T00:00:00Z\"\n        }\n    },\n    {\n        \"domainName\": \"www.threatintelligenceplatform.com\",\n        \"resourceType\": \"www.web\",\n        \"ipv4\": \"104.21.76.236\",\n        \"geolocation\": {\n            \"city\": \"South Beach\",\n            \"country\": \"US\",\n            \"latitude\": \"37.78298\",\n            \"longitude\": \"-122.38969\",\n            \"postalCode\": \"\",\n            \"region\": \"California\",\n            \"timezone\": \"-08:00\"\n        },\n        \"subnetwork\": {\n            \"name\": \"CLOUDFLARENET\",\n            \"ipAddressesRange\": \"104.21.64.0 - 104.21.79.255\",\n            \"country\": \"US\",\n            \"lastUpdateDate\": \"2021-05-26T00:00:00Z\"\n        }\n    },\n    {\n        \"domainName\": \"www.threatintelligenceplatform.com\",\n        \"resourceType\": \"www.web\",\n        \"ipv4\": \"172.67.202.22\",\n        \"geolocation\": {\n            \"city\": \"South Beach\",\n            \"country\": \"US\",\n            \"latitude\": \"37.78298\",\n            \"longitude\": \"-122.38969\",\n            \"postalCode\": \"\",\n            \"region\": \"California\",\n            \"timezone\": \"-08:00\"\n        },\n        \"subnetwork\": {\n            \"name\": \"CLOUDFLARENET\",\n            \"ipAddressesRange\": \"172.67.192.0 - 172.67.207.255\",\n            \"country\": \"US\",\n            \"lastUpdateDate\": \"2021-05-26T00:00:00Z\"\n        }\n    },\n    {\n        \"domainName\": \"alt2.aspmx.l.google.com\",\n        \"resourceType\": \"MX\",\n        \"ipv4\": \"173.194.202.27\",\n        \"geolocation\": {\n            \"city\": \"The Greenhouse\",\n            \"country\": \"US\",\n            \"latitude\": \"37.41889\",\n            \"longitude\": \"-122.10361\",\n            \"postalCode\": \"\",\n            \"region\": \"California\",\n            \"timezone\": \"-08:00\"\n        },\n        \"subnetwork\": {\n            \"name\": \"GOOGLE\",\n            \"ipAddressesRange\": \"173.194.202.0 - 173.194.202.255\",\n            \"country\": \"US\",\n            \"lastUpdateDate\": \"2012-02-24T00:00:00Z\"\n        }\n    },\n    {\n        \"domainName\": \"aspmx2.googlemail.com\",\n        \"resourceType\": \"MX\",\n        \"ipv4\": \"142.251.8.27\",\n        \"geolocation\": {\n            \"city\": \"The Greenhouse\",\n            \"country\": \"US\",\n            \"latitude\": \"37.41889\",\n            \"longitude\": \"-122.10361\",\n            \"postalCode\": \"\",\n            \"region\": \"California\",\n            \"timezone\": \"-08:00\"\n        },\n        \"subnetwork\": {\n            \"name\": \"GOOGLE\",\n            \"ipAddressesRange\": \"142.251.8.0 - 142.251.8.255\",\n            \"country\": \"US\",\n            \"lastUpdateDate\": \"2012-05-24T00:00:00Z\"\n        }\n    },\n    {\n        \"domainName\": \"aspmx3.googlemail.com\",\n        \"resourceType\": \"MX\",\n        \"ipv4\": \"173.194.202.26\",\n        \"geolocation\": {\n            \"city\": \"The Greenhouse\",\n            \"country\": \"US\",\n            \"latitude\": \"37.41889\",\n            \"longitude\": \"-122.10361\",\n            \"postalCode\": \"\",\n            \"region\": \"California\",\n            \"timezone\": \"-08:00\"\n        },\n        \"subnetwork\": {\n            \"name\": \"GOOGLE\",\n            \"ipAddressesRange\": \"173.194.202.0 - 173.194.202.255\",\n            \"country\": \"US\",\n            \"lastUpdateDate\": \"2012-02-24T00:00:00Z\"\n        }\n    },\n    {\n        \"domainName\": \"aspmx.l.google.com\",\n        \"resourceType\": \"MX\",\n        \"ipv4\": \"173.194.73.26\",\n        \"geolocation\": {\n            \"city\": \"The Greenhouse\",\n            \"country\": \"US\",\n            \"latitude\": \"37.41889\",\n            \"longitude\": \"-122.10361\",\n            \"postalCode\": \"\",\n            \"region\": \"California\",\n            \"timezone\": \"-08:00\"\n        },\n        \"subnetwork\": {\n            \"name\": \"GOOGLE\",\n            \"ipAddressesRange\": \"173.194.73.0 - 173.194.73.255\",\n            \"country\": \"US\",\n            \"lastUpdateDate\": \"2012-02-24T00:00:00Z\"\n        }\n    },\n    {\n        \"domainName\": \"alt1.aspmx.l.google.com\",\n        \"resourceType\": \"MX\",\n        \"ipv4\": \"142.251.8.26\",\n        \"geolocation\": {\n            \"city\": \"The Greenhouse\",\n            \"country\": \"US\",\n            \"latitude\": \"37.41889\",\n            \"longitude\": \"-122.10361\",\n            \"postalCode\": \"\",\n            \"region\": \"California\",\n            \"timezone\": \"-08:00\"\n        },\n        \"subnetwork\": {\n            \"name\": \"GOOGLE\",\n            \"ipAddressesRange\": \"142.251.8.0 - 142.251.8.255\",\n            \"country\": \"US\",\n            \"lastUpdateDate\": \"2012-05-24T00:00:00Z\"\n        }\n    },\n    {\n        \"domainName\": \"nora.ns.cloudflare.com\",\n        \"resourceType\": \"NS\",\n        \"ipv4\": \"108.162.192.213\",\n        \"geolocation\": {\n            \"city\": \"South Beach\",\n            \"country\": \"US\",\n            \"latitude\": \"37.78298\",\n            \"longitude\": \"-122.38969\",\n            \"postalCode\": \"\",\n            \"region\": \"California\",\n            \"timezone\": \"-08:00\"\n        },\n        \"subnetwork\": {\n            \"name\": \"CLOUDFLARENET\",\n            \"ipAddressesRange\": \"108.162.192.0 - 108.162.192.255\",\n            \"country\": \"US\",\n            \"lastUpdateDate\": \"2021-05-26T00:00:00Z\"\n        }\n    },\n    {\n        \"domainName\": \"nora.ns.cloudflare.com\",\n        \"resourceType\": \"NS\",\n        \"ipv4\": \"173.245.58.213\",\n        \"geolocation\": {\n            \"city\": \"Toronto\",\n            \"country\": \"CA\",\n            \"latitude\": \"43.70011\",\n            \"longitude\": \"-79.4163\",\n            \"postalCode\": \"\",\n            \"region\": \"Ontario\",\n            \"timezone\": \"-05:00\"\n        },\n        \"subnetwork\": {\n            \"name\": \"CLOUDFLARENET\",\n            \"ipAddressesRange\": \"173.245.58.0 - 173.245.58.255\",\n            \"country\": \"US\",\n            \"lastUpdateDate\": \"2021-05-26T00:00:00Z\"\n        }\n    },\n    {\n        \"domainName\": \"nora.ns.cloudflare.com\",\n        \"resourceType\": \"NS\",\n        \"ipv4\": \"172.64.32.213\",\n        \"geolocation\": {\n            \"city\": \"South Beach\",\n            \"country\": \"US\",\n            \"latitude\": \"37.78298\",\n            \"longitude\": \"-122.38969\",\n            \"postalCode\": \"\",\n            \"region\": \"California\",\n            \"timezone\": \"-08:00\"\n        },\n        \"subnetwork\": {\n            \"name\": \"CLOUDFLARENET\",\n            \"ipAddressesRange\": \"172.64.32.0 - 172.64.32.255\",\n            \"country\": \"US\",\n            \"lastUpdateDate\": \"2021-05-26T00:00:00Z\"\n        }\n    },\n    {\n        \"domainName\": \"seth.ns.cloudflare.com\",\n        \"resourceType\": \"NS\",\n        \"ipv4\": \"173.245.59.142\",\n        \"geolocation\": {\n            \"city\": \"Toronto\",\n            \"country\": \"CA\",\n            \"latitude\": \"43.70011\",\n            \"longitude\": \"-79.4163\",\n            \"postalCode\": \"\",\n            \"region\": \"Ontario\",\n            \"timezone\": \"-05:00\"\n        },\n        \"subnetwork\": {\n            \"name\": \"CLOUDFLARENET\",\n            \"ipAddressesRange\": \"173.245.59.0 - 173.245.59.255\",\n            \"country\": \"US\",\n            \"lastUpdateDate\": \"2021-05-26T00:00:00Z\"\n        }\n    },\n    {\n        \"domainName\": \"seth.ns.cloudflare.com\",\n        \"resourceType\": \"NS\",\n        \"ipv4\": \"108.162.193.142\",\n        \"geolocation\": {\n            \"city\": \"South Beach\",\n            \"country\": \"US\",\n            \"latitude\": \"37.78298\",\n            \"longitude\": \"-122.38969\",\n            \"postalCode\": \"\",\n            \"region\": \"California\",\n            \"timezone\": \"-08:00\"\n        },\n        \"subnetwork\": {\n            \"name\": \"CLOUDFLARENET\",\n            \"ipAddressesRange\": \"108.162.193.0 - 108.162.193.255\",\n            \"country\": \"US\",\n            \"lastUpdateDate\": \"2021-05-26T00:00:00Z\"\n        }\n    },\n    {\n        \"domainName\": \"seth.ns.cloudflare.com\",\n        \"resourceType\": \"NS\",\n        \"ipv4\": \"172.64.33.142\",\n        \"geolocation\": {\n            \"city\": \"South Beach\",\n            \"country\": \"US\",\n            \"latitude\": \"37.78298\",\n            \"longitude\": \"-122.38969\",\n            \"postalCode\": \"\",\n            \"region\": \"California\",\n            \"timezone\": \"-08:00\"\n        },\n        \"subnetwork\": {\n            \"name\": \"CLOUDFLARENET\",\n            \"ipAddressesRange\": \"172.64.33.0 - 172.64.33.255\",\n            \"country\": \"US\",\n            \"lastUpdateDate\": \"2021-05-26T00:00:00Z\"\n        }\n    }\n]"
+						}
+					]
+				}
+			],
+			"description": "This endpoint allows you, for a given domain name, to get a collection of its web, mail, and name servers - for each infrastructure entry to find its IP address, geolocation, and subnetwork information.\n\nFull API documentation is available [here](https://threatintelligenceplatform.com/threat-intelligence-api-docs/domains-infrastructure-analysis-api)."
+		},
+		{
+			"name": "SSL Certificate Chain API",
+			"item": [
+				{
+					"name": "Get a domain SSL certificate chain",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.threatintelligenceplatform.com/v1/sslCertificatesChain?domainName=threatintelligenceplatform.com",
+							"protocol": "https",
+							"host": [
+								"api",
+								"threatintelligenceplatform",
+								"com"
+							],
+							"path": [
+								"v1",
+								"sslCertificatesChain"
+							],
+							"query": [
+								{
+									"key": "domainName",
+									"value": "threatintelligenceplatform.com",
+									"description": "The target domain name."
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get a domain SSL certificate chain",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://api.threatintelligenceplatform.com/v1/sslCertificatesChain?domainName=threatintelligenceplatform.com",
+									"protocol": "https",
+									"host": [
+										"api",
+										"threatintelligenceplatform",
+										"com"
+									],
+									"path": [
+										"v1",
+										"sslCertificatesChain"
+									],
+									"query": [
+										{
+											"key": "domainName",
+											"value": "threatintelligenceplatform.com",
+											"description": "The target domain name."
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.8"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 28 Nov 2022 16:27:13 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "99"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"chainHierarchy\": \"end-user\",\n        \"commonName\": \"*.threatintelligenceplatform.com\",\n        \"type\": \"Domain validated\",\n        \"validFrom\": \"2022-10-24 00:00:00\",\n        \"validTo\": \"2023-10-07 23:59:59\",\n        \"serialNumber\": \"03:27:0C:E0:0E:A3:8B:4C:AF:57:A6:60:31:1C:65:03\",\n        \"signatureAlgorithm\": \"sha256WithRSAEncryption\",\n        \"subject\": {\n            \"commonName\": \"*.threatintelligenceplatform.com\"\n        },\n        \"issuer\": {\n            \"country\": \"GB\",\n            \"province\": \"Greater Manchester\",\n            \"city\": \"Salford\",\n            \"organization\": \"Sectigo Limited\",\n            \"commonName\": \"Sectigo RSA Domain Validation Secure Server CA\"\n        },\n        \"purposes\": [\n            \"sslclient\",\n            \"sslserver\",\n            \"nssslserver\",\n            \"any\",\n            \"ocsphelper\"\n        ],\n        \"purposesCA\": [\n            \"any\"\n        ],\n        \"publicKey\": {\n            \"type\": \"rsa\",\n            \"bits\": \"2048\",\n            \"pem\": \"-----BEGIN PUBLIC KEY-----\\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsQz4kxCMTiTHWYrVX9tI\\n8in4daXjIuwzo2sY5PdTJuc2PUXMR8NR/wKResrIz4PVljSWZljFG6mlKjjHLAec\\n0HJx6zhT3GL69m58KnAZGdO8W2pxzzdAcrP8NjSZAPphc2US0A9/Wgg1g1dv9pa4\\njGj9F7znvXXwBJxAHrCw/02LvviHrMxTbz5Rgu2COuBhKyul+Ggl5OsBoxBEOtrD\\nKn2UVUwtaLppB6jkOzZqWxmUJvwl31Y9HkwaPxOn6eSdqa+0k0CLFTm6uxHfYek5\\niuRUJRdqbAAWp0pXJqpQBZ6Go9iL2wgNrxNZzDpAvGHxMxoeNX9rhhrjIz05drGb\\nvQIDAQAB\\n-----END PUBLIC KEY-----\\n\"\n        },\n        \"extensions\": {\n            \"authorityKeyIdentifier\": \"keyid:8D:8C:5E:C4:54:AD:8A:E1:77:E9:9B:F9:9B:05:E1:B8:01:8D:61:E1\\n\",\n            \"subjectKeyIdentifier\": \"C3:15:49:13:26:27:12:50:F2:FF:F7:4F:DD:4D:96:43:52:4F:08:B7\",\n            \"keyUsage\": \"Digital Signature, Key Encipherment\",\n            \"basicConstraints\": \"CA:FALSE\",\n            \"extendedKeyUsage\": \"TLS Web Server Authentication, TLS Web Client Authentication\",\n            \"certificatePolicies\": \"Policy: 1.3.6.1.4.1.6449.1.2.2.7\\n  CPS: https://sectigo.com/CPS\\nPolicy: 2.23.140.1.2.1\\n\",\n            \"authorityInfoAccess\": \"CA Issuers - URI:http://crt.sectigo.com/SectigoRSADomainValidationSecureServerCA.crt\\nOCSP - URI:http://ocsp.sectigo.com\\n\",\n            \"subjectAltName\": \"DNS:*.threatintelligenceplatform.com, DNS:threatintelligenceplatform.com\",\n            \"ct_precert_scts\": \"Signed Certificate Timestamp:\\n    Version   : v1 (0x0)\\n    Log ID    : AD:F7:BE:FA:7C:FF:10:C8:8B:9D:3D:9C:1E:3E:18:6A:\\n                B4:67:29:5D:CF:B1:0C:24:CA:85:86:34:EB:DC:82:8A\\n    Timestamp : Oct 24 14:32:23.591 2022 GMT\\n    Extensions: none\\n    Signature : ecdsa-with-SHA256\\n                30:44:02:20:32:10:6D:87:4C:9B:16:C4:56:C4:05:C8:\\n                CF:5F:BE:2C:D1:04:F0:08:E4:72:8B:B0:3B:0E:D3:73:\\n                96:4F:55:F4:02:20:0C:19:D3:34:E4:1A:6A:CA:72:7C:\\n                AE:61:07:52:DC:84:3C:18:DC:6A:8C:E0:9A:CF:1E:C1:\\n                96:98:F2:59:73:FC\\nSigned Certificate Timestamp:\\n    Version   : v1 (0x0)\\n    Log ID    : 7A:32:8C:54:D8:B7:2D:B6:20:EA:38:E0:52:1E:E9:84:\\n                16:70:32:13:85:4D:3B:D2:2B:C1:3A:57:A3:52:EB:52\\n    Timestamp : Oct 24 14:32:23.572 2022 GMT\\n    Extensions: none\\n    Signature : ecdsa-with-SHA256\\n                30:46:02:21:00:BC:93:7A:FE:C8:D6:61:AE:0B:FB:B3:\\n                10:62:01:3C:E1:2F:47:D9:41:90:56:1C:DC:61:91:00:\\n                10:E6:51:0C:96:02:21:00:98:8F:88:91:C1:47:D5:D8:\\n                70:31:C2:B2:6A:CD:F1:84:CA:19:97:FB:93:DE:44:12:\\n                E3:16:AE:74:AA:DB:53:B3\\nSigned Certificate Timestamp:\\n    Version   : v1 (0x0)\\n    Log ID    : E8:3E:D0:DA:3E:F5:06:35:32:E7:57:28:BC:89:6B:C9:\\n                03:D3:CB:D1:11:6B:EC:EB:69:E1:77:7D:6D:06:BD:6E\\n    Timestamp : Oct 24 14:32:23.502 2022 GMT\\n    Extensions: none\\n    Signature : ecdsa-with-SHA256\\n                30:45:02:20:1E:9E:0E:B0:0C:98:BB:2E:15:33:4C:CA:\\n                C4:ED:5E:1C:9E:7F:BF:A6:B4:1F:3B:63:7F:CC:63:D9:\\n                33:03:79:95:02:21:00:F0:D9:8D:C9:66:B0:60:77:B0:\\n                A0:96:98:7F:56:2B:76:0A:3C:B6:25:F5:4A:72:73:6C:\\n                3B:5A:9C:B4:94:3C:C3\"\n        },\n        \"certificatePEM\": \"-----BEGIN CERTIFICATE-----\\nMIIGaTCCBVGgAwIBAgIQAycM4A6ji0yvV6ZgMRxlAzANBgkqhkiG9w0BAQsFADCB\\njzELMAkGA1UEBhMCR0IxGzAZBgNVBAgTEkdyZWF0ZXIgTWFuY2hlc3RlcjEQMA4G\\nA1UEBxMHU2FsZm9yZDEYMBYGA1UEChMPU2VjdGlnbyBMaW1pdGVkMTcwNQYDVQQD\\nEy5TZWN0aWdvIFJTQSBEb21haW4gVmFsaWRhdGlvbiBTZWN1cmUgU2VydmVyIENB\\nMB4XDTIyMTAyNDAwMDAwMFoXDTIzMTAwNzIzNTk1OVowKzEpMCcGA1UEAwwgKi50\\naHJlYXRpbnRlbGxpZ2VuY2VwbGF0Zm9ybS5jb20wggEiMA0GCSqGSIb3DQEBAQUA\\nA4IBDwAwggEKAoIBAQCxDPiTEIxOJMdZitVf20jyKfh1peMi7DOjaxjk91Mm5zY9\\nRcxHw1H/ApF6ysjPg9WWNJZmWMUbqaUqOMcsB5zQcnHrOFPcYvr2bnwqcBkZ07xb\\nanHPN0Bys/w2NJkA+mFzZRLQD39aCDWDV2/2lriMaP0XvOe9dfAEnEAesLD/TYu+\\n+IeszFNvPlGC7YI64GErK6X4aCXk6wGjEEQ62sMqfZRVTC1oumkHqOQ7NmpbGZQm\\n/CXfVj0eTBo/E6fp5J2pr7STQIsVObq7Ed9h6TmK5FQlF2psABanSlcmqlAFnoaj\\n2IvbCA2vE1nMOkC8YfEzGh41f2uGGuMjPTl2sZu9AgMBAAGjggMiMIIDHjAfBgNV\\nHSMEGDAWgBSNjF7EVK2K4Xfpm/mbBeG4AY1h4TAdBgNVHQ4EFgQUwxVJEyYnElDy\\n//dP3U2WQ1JPCLcwDgYDVR0PAQH/BAQDAgWgMAwGA1UdEwEB/wQCMAAwHQYDVR0l\\nBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMEkGA1UdIARCMEAwNAYLKwYBBAGyMQEC\\nAgcwJTAjBggrBgEFBQcCARYXaHR0cHM6Ly9zZWN0aWdvLmNvbS9DUFMwCAYGZ4EM\\nAQIBMIGEBggrBgEFBQcBAQR4MHYwTwYIKwYBBQUHMAKGQ2h0dHA6Ly9jcnQuc2Vj\\ndGlnby5jb20vU2VjdGlnb1JTQURvbWFpblZhbGlkYXRpb25TZWN1cmVTZXJ2ZXJD\\nQS5jcnQwIwYIKwYBBQUHMAGGF2h0dHA6Ly9vY3NwLnNlY3RpZ28uY29tMEsGA1Ud\\nEQREMEKCICoudGhyZWF0aW50ZWxsaWdlbmNlcGxhdGZvcm0uY29tgh50aHJlYXRp\\nbnRlbGxpZ2VuY2VwbGF0Zm9ybS5jb20wggF+BgorBgEEAdZ5AgQCBIIBbgSCAWoB\\naAB1AK33vvp8/xDIi509nB4+GGq0Zyldz7EMJMqFhjTr3IKKAAABhAporycAAAQD\\nAEYwRAIgMhBth0ybFsRWxAXIz1++LNEE8AjkcouwOw7Tc5ZPVfQCIAwZ0zTkGmrK\\ncnyuYQdS3IQ8GNxqjOCazx7BlpjyWXP8AHcAejKMVNi3LbYg6jjgUh7phBZwMhOF\\nTTvSK8E6V6NS61IAAAGECmivFAAABAMASDBGAiEAvJN6/sjWYa4L+7MQYgE84S9H\\n2UGQVhzcYZEAEOZRDJYCIQCYj4iRwUfV2HAxwrJqzfGEyhmX+5PeRBLjFq50qttT\\nswB2AOg+0No+9QY1MudXKLyJa8kD08vREWvs62nhd31tBr1uAAABhApors4AAAQD\\nAEcwRQIgHp4OsAyYuy4VM0zKxO1eHJ5/v6a0Hztjf8xj2TMDeZUCIQDw2Y3JZrBg\\nd7Cglph/Vit2Cjy2JfVKcnNsO1qctJQ8wzANBgkqhkiG9w0BAQsFAAOCAQEAdMio\\nFc2gcntFmgl75+F7AoNejtv6iU/1Qz2uem5Rf1N4igPrW3olGvi92SoJ630Z/cXQ\\n+20zeHmCPnFUL5mkRiG9sH5o4PSgaxWDNxgkE4uPikztkPEnqIqo9EyWHJIarv7x\\n3tUOb4/ui24S/EVPUdC8H9DExo2w88WAgQ5hK5E2q3TCCYS7FqE1t/hQrdJ0/zSZ\\nkzwGQQiPRPpIGCGX+vH26Pm12YM1l8UbAkPutoINRwc/4DKxbzivfpDXPJovCmQS\\nF6G1yzgwfcAle+zaEHUvbGRB7KYr9CiGMCYStCklJeIj9NwvZb6e8p45qXN1YSDR\\nt2iYJLt/MxyF6L9TEg==\\n-----END CERTIFICATE-----\\n\"\n    },\n    {\n        \"chainHierarchy\": \"intermediate\",\n        \"commonName\": \"Sectigo RSA Domain Validation Secure Server CA\",\n        \"type\": \"Organization validated\",\n        \"validFrom\": \"2018-11-02 00:00:00\",\n        \"validTo\": \"2030-12-31 23:59:59\",\n        \"serialNumber\": \"7D:5B:51:26:B4:76:BA:11:DB:74:16:0B:BC:53:0D:A7\",\n        \"signatureAlgorithm\": \"sha384WithRSAEncryption\",\n        \"subject\": {\n            \"country\": \"GB\",\n            \"province\": \"Greater Manchester\",\n            \"city\": \"Salford\",\n            \"organization\": \"Sectigo Limited\",\n            \"commonName\": \"Sectigo RSA Domain Validation Secure Server CA\"\n        },\n        \"issuer\": {\n            \"country\": \"US\",\n            \"province\": \"New Jersey\",\n            \"city\": \"Jersey City\",\n            \"organization\": \"The USERTRUST Network\",\n            \"commonName\": \"USERTrust RSA Certification Authority\"\n        },\n        \"purposes\": [\n            \"sslclient\",\n            \"sslserver\",\n            \"crlsign\",\n            \"any\",\n            \"ocsphelper\"\n        ],\n        \"purposesCA\": [\n            \"sslclient\",\n            \"sslserver\",\n            \"nssslserver\",\n            \"crlsign\",\n            \"any\",\n            \"ocsphelper\",\n            \"timestampsign\"\n        ],\n        \"publicKey\": {\n            \"type\": \"rsa\",\n            \"bits\": \"2048\",\n            \"pem\": \"-----BEGIN PUBLIC KEY-----\\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA1nMz1tc8INAA0hdFuNY+\\nB6I/x0HuMjDJsGz99J/LEpgPLT+NTQEMgg8Xf2Iu6bhIefsWg06t1zIlk7cHv7lQ\\nP6lMw0Aq6Tn/2YHKHxYyQdqAJrkjeocgHuP/IJo8lURvh3UGkEC0MpMWCRAIIz7S\\n3YcPb11RFGoKacVPAXJpz9OTTG0EoKMbgn6xmrntxZ7FN3ifmgg0+1YuWMQJDgZk\\nW7w33PGfKGioVrCSo1yfu4iYCBskHaswha6vsC6eep3BwEIc4gLw6uBK0u+QDrTB\\nQBbwb4VCSmT3pDCg/r8uoydajotYuK3DGReEY+1vVv2Dy2A0xHS+5p3b4eTlygxf\\nFQIDAQAB\\n-----END PUBLIC KEY-----\\n\"\n        },\n        \"extensions\": {\n            \"authorityKeyIdentifier\": \"keyid:53:79:BF:5A:AA:2B:4A:CF:54:80:E1:D8:9B:C0:9D:F2:B2:03:66:CB\\n\",\n            \"subjectKeyIdentifier\": \"8D:8C:5E:C4:54:AD:8A:E1:77:E9:9B:F9:9B:05:E1:B8:01:8D:61:E1\",\n            \"keyUsage\": \"Digital Signature, Certificate Sign, CRL Sign\",\n            \"basicConstraints\": \"CA:TRUE, pathlen:0\",\n            \"extendedKeyUsage\": \"TLS Web Server Authentication, TLS Web Client Authentication\",\n            \"certificatePolicies\": \"Policy: X509v3 Any Policy\\nPolicy: 2.23.140.1.2.1\\n\",\n            \"crlDistributionPoints\": \"\\nFull Name:\\n  URI:http://crl.usertrust.com/USERTrustRSACertificationAuthority.crl\\n\",\n            \"authorityInfoAccess\": \"CA Issuers - URI:http://crt.usertrust.com/USERTrustRSAAddTrustCA.crt\\nOCSP - URI:http://ocsp.usertrust.com\\n\"\n        },\n        \"certificatePEM\": \"-----BEGIN CERTIFICATE-----\\nMIIGEzCCA/ugAwIBAgIQfVtRJrR2uhHbdBYLvFMNpzANBgkqhkiG9w0BAQwFADCB\\niDELMAkGA1UEBhMCVVMxEzARBgNVBAgTCk5ldyBKZXJzZXkxFDASBgNVBAcTC0pl\\ncnNleSBDaXR5MR4wHAYDVQQKExVUaGUgVVNFUlRSVVNUIE5ldHdvcmsxLjAsBgNV\\nBAMTJVVTRVJUcnVzdCBSU0EgQ2VydGlmaWNhdGlvbiBBdXRob3JpdHkwHhcNMTgx\\nMTAyMDAwMDAwWhcNMzAxMjMxMjM1OTU5WjCBjzELMAkGA1UEBhMCR0IxGzAZBgNV\\nBAgTEkdyZWF0ZXIgTWFuY2hlc3RlcjEQMA4GA1UEBxMHU2FsZm9yZDEYMBYGA1UE\\nChMPU2VjdGlnbyBMaW1pdGVkMTcwNQYDVQQDEy5TZWN0aWdvIFJTQSBEb21haW4g\\nVmFsaWRhdGlvbiBTZWN1cmUgU2VydmVyIENBMIIBIjANBgkqhkiG9w0BAQEFAAOC\\nAQ8AMIIBCgKCAQEA1nMz1tc8INAA0hdFuNY+B6I/x0HuMjDJsGz99J/LEpgPLT+N\\nTQEMgg8Xf2Iu6bhIefsWg06t1zIlk7cHv7lQP6lMw0Aq6Tn/2YHKHxYyQdqAJrkj\\neocgHuP/IJo8lURvh3UGkEC0MpMWCRAIIz7S3YcPb11RFGoKacVPAXJpz9OTTG0E\\noKMbgn6xmrntxZ7FN3ifmgg0+1YuWMQJDgZkW7w33PGfKGioVrCSo1yfu4iYCBsk\\nHaswha6vsC6eep3BwEIc4gLw6uBK0u+QDrTBQBbwb4VCSmT3pDCg/r8uoydajotY\\nuK3DGReEY+1vVv2Dy2A0xHS+5p3b4eTlygxfFQIDAQABo4IBbjCCAWowHwYDVR0j\\nBBgwFoAUU3m/WqorSs9UgOHYm8Cd8rIDZsswHQYDVR0OBBYEFI2MXsRUrYrhd+mb\\n+ZsF4bgBjWHhMA4GA1UdDwEB/wQEAwIBhjASBgNVHRMBAf8ECDAGAQH/AgEAMB0G\\nA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjAbBgNVHSAEFDASMAYGBFUdIAAw\\nCAYGZ4EMAQIBMFAGA1UdHwRJMEcwRaBDoEGGP2h0dHA6Ly9jcmwudXNlcnRydXN0\\nLmNvbS9VU0VSVHJ1c3RSU0FDZXJ0aWZpY2F0aW9uQXV0aG9yaXR5LmNybDB2Bggr\\nBgEFBQcBAQRqMGgwPwYIKwYBBQUHMAKGM2h0dHA6Ly9jcnQudXNlcnRydXN0LmNv\\nbS9VU0VSVHJ1c3RSU0FBZGRUcnVzdENBLmNydDAlBggrBgEFBQcwAYYZaHR0cDov\\nL29jc3AudXNlcnRydXN0LmNvbTANBgkqhkiG9w0BAQwFAAOCAgEAMr9hvQ5Iw0/H\\nukdN+Jx4GQHcEx2Ab/zDcLRSmjEzmldS+zGea6TvVKqJjUAXaPgREHzSyrHxVYbH\\n7rM2kYb2OVG/Rr8PoLq0935JxCo2F57kaDl6r5ROVm+yezu/Coa9zcV3HAO4OLGi\\nH19+24rcRki2aArPsrW04jTkZ6k4Zgle0rj8nSg6F0AnwnJOKf0hPHzPE/uWLMUx\\nRP0T7dWbqWlod3zu4f+k+TY4CFM5ooQ0nBnzvg6s1SQ36yOoeNDT5++SR2RiOSLv\\nxvcRviKFxmZEJCaOEDKNyJOuB56DPi/Z+fVGjmO+wea03KbNIaiGCpXZLoUmGv38\\nsbZXQm2V0TP2ORQGgkE49Y9Y3IBbpNV9lXj9p5v//cWoaasm56ekBYdbqbe4oyAL\\nl6lFhd2zi+WJN44pDfwGF/Y4QA5C5BIG+3vzxhFoYt/jmPQT2BVPi7Fp2RBgvGQq\\n6jG35LWjOhSbJuMLe/0CjraZwTiXWTb2qHSihrZe68Zk6s+go/lunrotEbaGmAhY\\nLcmsJWTyXnW0OMGuf1pGg+pRyrbxmRE1a6Vqe8YAsOf4vmSyrcjC8azjUeqkk+B5\\nyOGBQMkKW+ESPMFgKuOXwIlCypTPRpgSabuY0MLTDXJLR27lk8QyKGOHQ+SwMj4K\\n00u/I5sUKUErmgQfky3xxzlIPK1aEn8=\\n-----END CERTIFICATE-----\\n\"\n    },\n    {\n        \"chainHierarchy\": \"intermediate\",\n        \"commonName\": \"USERTrust RSA Certification Authority\",\n        \"type\": \"Organization validated\",\n        \"validFrom\": \"2019-03-12 00:00:00\",\n        \"validTo\": \"2028-12-31 23:59:59\",\n        \"serialNumber\": \"39:72:44:3A:F9:22:B7:51:D7:D3:6C:10:DD:31:35:95\",\n        \"signatureAlgorithm\": \"sha384WithRSAEncryption\",\n        \"subject\": {\n            \"country\": \"US\",\n            \"province\": \"New Jersey\",\n            \"city\": \"Jersey City\",\n            \"organization\": \"The USERTRUST Network\",\n            \"commonName\": \"USERTrust RSA Certification Authority\"\n        },\n        \"issuer\": {\n            \"country\": \"GB\",\n            \"province\": \"Greater Manchester\",\n            \"city\": \"Salford\",\n            \"organization\": \"Comodo CA Limited\",\n            \"commonName\": \"AAA Certificate Services\"\n        },\n        \"purposes\": [\n            \"sslclient\",\n            \"sslserver\",\n            \"smimesign\",\n            \"crlsign\",\n            \"any\",\n            \"ocsphelper\"\n        ],\n        \"purposesCA\": [\n            \"sslclient\",\n            \"sslserver\",\n            \"nssslserver\",\n            \"smimesign\",\n            \"smimeencrypt\",\n            \"crlsign\",\n            \"any\",\n            \"ocsphelper\",\n            \"timestampsign\"\n        ],\n        \"publicKey\": {\n            \"type\": \"rsa\",\n            \"bits\": \"4096\",\n            \"pem\": \"-----BEGIN PUBLIC KEY-----\\nMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAgBJlFzYOw9sIs9CsVw12\\n7c0n00ytUINh4qogTQktZAnczomfzD2p7PbPwdzx07HWezcoEStH2jnGvDoZtF+m\\nvX2do2NCtnbyqTsrkfjib9DsFiCQCT7i6HTJGLSR1GJk23+jBvGIGGqQIjy8/hPw\\nhxR79uQfjtTkUcYRZ0YIUcuGFFQ/vDP+fmyc/xadGL1RjjWmp2bIcmfbIWax1Jt4\\nA8BQOujM8Ny8nkz+rwWWNR9XWrf/zvk9tyy29lTdyOcSOk2uTIq3XJq0tyA9yn8i\\nNK5+O2hmAUTnAU5GU5szYPeUvlM3kHND8zLDU+/bqv50TmnHa4xgk97Exwzf4TKu\\nzJM7UXiVZ4vuPVb+DNBpDxsP8yUmazNt925H+nND5X4OpWaxKXwyhGNVicQNwZNU\\nMBkTrNN9N6frXTpsNVzbQdcS2qlJC9/YgIoJk2KOtWbPJYjNhLixP6Q5D9kCnusS\\nTJV882sFqV4Wg8y4Z+LoE53MW4LTTLPtW//e5XOsIzstAL81VXQJSdhJWBp/kjbm\\nUZIO8yZ9HE0XvMnsQybQv0FfQKlERPSZ51eHnlAfV1SoPv10Yy+xUGUJ5lhCLkMa\\nTLTwJUdZ+gQek9QmRkpQgbLevni3/GcV4clXhB4PY9bpYrrWX1Uu6lzGKAgEJTm4\\nDiup8kyXHAc/DVL17e8vgg8CAwEAAQ==\\n-----END PUBLIC KEY-----\\n\"\n        },\n        \"extensions\": {\n            \"authorityKeyIdentifier\": \"keyid:A0:11:0A:23:3E:96:F1:07:EC:E2:AF:29:EF:82:A5:7F:D0:30:A4:B4\\n\",\n            \"subjectKeyIdentifier\": \"53:79:BF:5A:AA:2B:4A:CF:54:80:E1:D8:9B:C0:9D:F2:B2:03:66:CB\",\n            \"keyUsage\": \"Digital Signature, Certificate Sign, CRL Sign\",\n            \"basicConstraints\": \"CA:TRUE\",\n            \"certificatePolicies\": \"Policy: X509v3 Any Policy\\n\",\n            \"crlDistributionPoints\": \"\\nFull Name:\\n  URI:http://crl.comodoca.com/AAACertificateServices.crl\\n\",\n            \"authorityInfoAccess\": \"OCSP - URI:http://ocsp.comodoca.com\\n\"\n        },\n        \"certificatePEM\": \"-----BEGIN CERTIFICATE-----\\nMIIFgTCCBGmgAwIBAgIQOXJEOvkit1HX02wQ3TE1lTANBgkqhkiG9w0BAQwFADB7\\nMQswCQYDVQQGEwJHQjEbMBkGA1UECAwSR3JlYXRlciBNYW5jaGVzdGVyMRAwDgYD\\nVQQHDAdTYWxmb3JkMRowGAYDVQQKDBFDb21vZG8gQ0EgTGltaXRlZDEhMB8GA1UE\\nAwwYQUFBIENlcnRpZmljYXRlIFNlcnZpY2VzMB4XDTE5MDMxMjAwMDAwMFoXDTI4\\nMTIzMTIzNTk1OVowgYgxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpOZXcgSmVyc2V5\\nMRQwEgYDVQQHEwtKZXJzZXkgQ2l0eTEeMBwGA1UEChMVVGhlIFVTRVJUUlVTVCBO\\nZXR3b3JrMS4wLAYDVQQDEyVVU0VSVHJ1c3QgUlNBIENlcnRpZmljYXRpb24gQXV0\\naG9yaXR5MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAgBJlFzYOw9sI\\ns9CsVw127c0n00ytUINh4qogTQktZAnczomfzD2p7PbPwdzx07HWezcoEStH2jnG\\nvDoZtF+mvX2do2NCtnbyqTsrkfjib9DsFiCQCT7i6HTJGLSR1GJk23+jBvGIGGqQ\\nIjy8/hPwhxR79uQfjtTkUcYRZ0YIUcuGFFQ/vDP+fmyc/xadGL1RjjWmp2bIcmfb\\nIWax1Jt4A8BQOujM8Ny8nkz+rwWWNR9XWrf/zvk9tyy29lTdyOcSOk2uTIq3XJq0\\ntyA9yn8iNK5+O2hmAUTnAU5GU5szYPeUvlM3kHND8zLDU+/bqv50TmnHa4xgk97E\\nxwzf4TKuzJM7UXiVZ4vuPVb+DNBpDxsP8yUmazNt925H+nND5X4OpWaxKXwyhGNV\\nicQNwZNUMBkTrNN9N6frXTpsNVzbQdcS2qlJC9/YgIoJk2KOtWbPJYjNhLixP6Q5\\nD9kCnusSTJV882sFqV4Wg8y4Z+LoE53MW4LTTLPtW//e5XOsIzstAL81VXQJSdhJ\\nWBp/kjbmUZIO8yZ9HE0XvMnsQybQv0FfQKlERPSZ51eHnlAfV1SoPv10Yy+xUGUJ\\n5lhCLkMaTLTwJUdZ+gQek9QmRkpQgbLevni3/GcV4clXhB4PY9bpYrrWX1Uu6lzG\\nKAgEJTm4Diup8kyXHAc/DVL17e8vgg8CAwEAAaOB8jCB7zAfBgNVHSMEGDAWgBSg\\nEQojPpbxB+zirynvgqV/0DCktDAdBgNVHQ4EFgQUU3m/WqorSs9UgOHYm8Cd8rID\\nZsswDgYDVR0PAQH/BAQDAgGGMA8GA1UdEwEB/wQFMAMBAf8wEQYDVR0gBAowCDAG\\nBgRVHSAAMEMGA1UdHwQ8MDowOKA2oDSGMmh0dHA6Ly9jcmwuY29tb2RvY2EuY29t\\nL0FBQUNlcnRpZmljYXRlU2VydmljZXMuY3JsMDQGCCsGAQUFBwEBBCgwJjAkBggr\\nBgEFBQcwAYYYaHR0cDovL29jc3AuY29tb2RvY2EuY29tMA0GCSqGSIb3DQEBDAUA\\nA4IBAQAYh1HcdCE9nIrgJ7cz0C7M7PDmy14R3iJvm3WOnnL+5Nb+qh+cli3vA0p+\\nrvSNb3I8QzvAP+u431yqqcau8vzY7qN7Q/aGNnwU4M309z/+3ri0ivCRlv79Q2R+\\n/czSAaF9ffgZGclCKxO/WIu6pKJmBHaIkU4MiRTOok3JMrO66BQavHHxW/BBC5gA\\nCiIDEOUMsfnNkjcZ7Tvx5Dq2+UUTJnWvu6rvP3t3O9LEApE9GQDTF1w52z97GA1F\\nzZOFli9d31kWTz9RvdVFGD/tSo7oBmF0Ixa1DVBzJ0RHfxBdiSprhTEUxOipakyA\\nvGp4z7h/jnZymQyd/teRCBaho1+V\\n-----END CERTIFICATE-----\\n\"\n    },\n    {\n        \"chainHierarchy\": \"root\",\n        \"commonName\": \"AAA Certificate Services\",\n        \"type\": \"Organization validated\",\n        \"validFrom\": \"2004-01-01 00:00:00\",\n        \"validTo\": \"2028-12-31 23:59:59\",\n        \"serialNumber\": \"01\",\n        \"signatureAlgorithm\": \"sha1WithRSAEncryption\",\n        \"subject\": {\n            \"country\": \"GB\",\n            \"province\": \"Greater Manchester\",\n            \"city\": \"Salford\",\n            \"organization\": \"Comodo CA Limited\",\n            \"commonName\": \"AAA Certificate Services\"\n        },\n        \"issuer\": {\n            \"country\": \"GB\",\n            \"province\": \"Greater Manchester\",\n            \"city\": \"Salford\",\n            \"organization\": \"Comodo CA Limited\",\n            \"commonName\": \"AAA Certificate Services\"\n        },\n        \"purposes\": [\n            \"crlsign\",\n            \"any\",\n            \"ocsphelper\"\n        ],\n        \"purposesCA\": [\n            \"sslclient\",\n            \"sslserver\",\n            \"nssslserver\",\n            \"smimesign\",\n            \"smimeencrypt\",\n            \"crlsign\",\n            \"any\",\n            \"ocsphelper\",\n            \"timestampsign\"\n        ],\n        \"publicKey\": {\n            \"type\": \"rsa\",\n            \"bits\": \"2048\",\n            \"pem\": \"-----BEGIN PUBLIC KEY-----\\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvkCd9G7h6naHHE1FRI6+\\nRsiDBp3BKv4YH47kAvrzq11QihYxC5oG0MVwIs1JLVRjzLZuaEYLU+rLTCTAvHJO\\n6vEVrvRUmhIKw3qyM2Di2olV8yJY897cz++DhqKMlE+faPKYkEaEJ8d2v+PMNSyL\\nXgdkZYLASLCokflhn3YgUKiRx2a163hiA1bwihoT6jGjHqCZ/Tj29icyWG8H9Wu4\\n+xQrr7eqzNZjX3OM2gWZqDioyxd4NlGs6Z70eDqNzw/ZQuKYDKsvnw4B3u+fmUnx\\nLd+sdE0bmLVHxeUp0fmQGMdinL6DxyZ7Poolx8DdneY1aBAgnY/Y3tLDhJwNXugv\\nyQIDAQAB\\n-----END PUBLIC KEY-----\\n\"\n        },\n        \"extensions\": {\n            \"subjectKeyIdentifier\": \"A0:11:0A:23:3E:96:F1:07:EC:E2:AF:29:EF:82:A5:7F:D0:30:A4:B4\",\n            \"keyUsage\": \"Certificate Sign, CRL Sign\",\n            \"basicConstraints\": \"CA:TRUE\",\n            \"crlDistributionPoints\": \"\\nFull Name:\\n  URI:http://crl.comodoca.com/AAACertificateServices.crl\\n\\nFull Name:\\n  URI:http://crl.comodo.net/AAACertificateServices.crl\\n\"\n        },\n        \"certificatePEM\": \"-----BEGIN CERTIFICATE-----\\nMIIEMjCCAxqgAwIBAgIBATANBgkqhkiG9w0BAQUFADB7MQswCQYDVQQGEwJHQjEb\\nMBkGA1UECAwSR3JlYXRlciBNYW5jaGVzdGVyMRAwDgYDVQQHDAdTYWxmb3JkMRow\\nGAYDVQQKDBFDb21vZG8gQ0EgTGltaXRlZDEhMB8GA1UEAwwYQUFBIENlcnRpZmlj\\nYXRlIFNlcnZpY2VzMB4XDTA0MDEwMTAwMDAwMFoXDTI4MTIzMTIzNTk1OVowezEL\\nMAkGA1UEBhMCR0IxGzAZBgNVBAgMEkdyZWF0ZXIgTWFuY2hlc3RlcjEQMA4GA1UE\\nBwwHU2FsZm9yZDEaMBgGA1UECgwRQ29tb2RvIENBIExpbWl0ZWQxITAfBgNVBAMM\\nGEFBQSBDZXJ0aWZpY2F0ZSBTZXJ2aWNlczCCASIwDQYJKoZIhvcNAQEBBQADggEP\\nADCCAQoCggEBAL5AnfRu4ep2hxxNRUSOvkbIgwadwSr+GB+O5AL686tdUIoWMQua\\nBtDFcCLNSS1UY8y2bmhGC1Pqy0wkwLxyTurxFa70VJoSCsN6sjNg4tqJVfMiWPPe\\n3M/vg4aijJRPn2jymJBGhCfHdr/jzDUsi14HZGWCwEiwqJH5YZ92IFCokcdmtet4\\nYgNW8IoaE+oxox6gmf049vYnMlhvB/VruPsUK6+3qszWY19zjNoFmag4qMsXeDZR\\nrOme9Hg6jc8P2ULimAyrL58OAd7vn5lJ8S3frHRNG5i1R8XlKdH5kBjHYpy+g8cm\\nez6KJcfA3Z3mNWgQIJ2P2N7Sw4ScDV7oL8kCAwEAAaOBwDCBvTAdBgNVHQ4EFgQU\\noBEKIz6W8Qfs4q8p74Klf9AwpLQwDgYDVR0PAQH/BAQDAgEGMA8GA1UdEwEB/wQF\\nMAMBAf8wewYDVR0fBHQwcjA4oDagNIYyaHR0cDovL2NybC5jb21vZG9jYS5jb20v\\nQUFBQ2VydGlmaWNhdGVTZXJ2aWNlcy5jcmwwNqA0oDKGMGh0dHA6Ly9jcmwuY29t\\nb2RvLm5ldC9BQUFDZXJ0aWZpY2F0ZVNlcnZpY2VzLmNybDANBgkqhkiG9w0BAQUF\\nAAOCAQEACFb8AvCb6P+k+tZ7xkSAzk/ExfYAWMymtrwUSWgEdujm7l3sAg9g1o1Q\\nGE8mTgHj5rCl7r+8dFRBv/38ErjHT1r0iWAFf2C3BUrz9vHCv8S5dIa2LX1rzNLz\\nRt0vxuBqw8M0Ayx9lt1awg6nCpnBBYurDC/zXDrPbDdVCYfeU0BsWO/8tqtlbgT2\\nG9w84FoVxp7Z8VlIMCFlA2zs6SFz7JsDoeA3raAVGI/6ugLOpyypEBMs1OUIJqsi\\nl2D4kF501KKaU73yqWjgom7C12yxow+ev+to51byrvLjKzg6CYG1a4XXvi3tPxq3\\nsmPi9WIsgtRqAEFQ8TmDn5XpNpaYbg==\\n-----END CERTIFICATE-----\\n\"\n    }\n]"
+						}
+					]
+				}
+			],
+			"description": "SSL Certificate Chain API lets you get detailed information about its SSL Certificate and the complete SSL Certificate chain.\n\nFull API documentation is available [here](https://threatintelligenceplatform.com/threat-intelligence-api-docs/ssl-certificate-chain-api)."
+		},
+		{
+			"name": "SSL Configuration Analysis API",
+			"item": [
+				{
+					"name": "Check SSL configuration",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.threatintelligenceplatform.com/v1/sslConfiguration?domainName=threatintelligenceplatform.com",
+							"protocol": "https",
+							"host": [
+								"api",
+								"threatintelligenceplatform",
+								"com"
+							],
+							"path": [
+								"v1",
+								"sslConfiguration"
+							],
+							"query": [
+								{
+									"key": "domainName",
+									"value": "threatintelligenceplatform.com",
+									"description": "The target domain name."
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Check SSL configuration",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://api.threatintelligenceplatform.com/v1/sslConfiguration?domainName=threatintelligenceplatform.com",
+									"protocol": "https",
+									"host": [
+										"api",
+										"threatintelligenceplatform",
+										"com"
+									],
+									"path": [
+										"v1",
+										"sslConfiguration"
+									],
+									"query": [
+										{
+											"key": "domainName",
+											"value": "threatintelligenceplatform.com",
+											"description": "The target domain name."
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.8"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 28 Nov 2022 16:29:19 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "99"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"hasWarnings\": true,\n    \"testResults\": {\n        \"sslCertificateConfigured\": {\n            \"status\": \"OK\",\n            \"details\": [\n                \"OK\"\n            ]\n        },\n        \"validFrom\": {\n            \"status\": \"OK\",\n            \"details\": [\n                \"Valid from 2022-10-24 00:00:00\"\n            ]\n        },\n        \"validTo\": {\n            \"status\": \"OK\",\n            \"details\": [\n                \"Valid until 2023-10-07 23:59:59\"\n            ]\n        },\n        \"ocspCheck\": {\n            \"status\": \"OK\",\n            \"details\": [\n                \"OCSP URL: http://ocsp.sectigo.com\",\n                \" - Status: good\",\n                \" - Last update: Nov 25 16:06:56 2022 GMT\",\n                \" - Next update: Dec  2 16:06:55 2022 GMT\"\n            ]\n        },\n        \"hostnameValidation\": {\n            \"status\": \"OK\",\n            \"details\": [\n                \"Wildcard certificate\"\n            ]\n        },\n        \"selfSignedCertificate\": {\n            \"status\": \"OK\",\n            \"details\": [\n                \"CA-signed certificate\"\n            ]\n        },\n        \"supportedProtocols\": {\n            \"status\": \"OK\",\n            \"details\": [\n                \"Your server supports protocols: \",\n                \"SSLv3 - not supported\",\n                \"TLSv1.0 - supported\",\n                \"TLSv1.1 - supported\",\n                \"TLSv1.2 - supported\",\n                \"SSLv2 - not supported\"\n            ]\n        },\n        \"supportedCipherSuites\": {\n            \"status\": \"OK\",\n            \"details\": [\n                \"No suboptimal cipher suites found\"\n            ]\n        },\n        \"sslCompression\": {\n            \"status\": \"OK\",\n            \"details\": [\n                \"Disabled\"\n            ]\n        },\n        \"httpPublicKeyPinningExtension\": {\n            \"status\": \"OK\",\n            \"details\": [\n                \"HPKP headers not set\"\n            ]\n        },\n        \"forceHTTPSConnections\": {\n            \"status\": \"Warning\",\n            \"details\": [\n                \"No\"\n            ]\n        },\n        \"heartbleedVulnerabilityCheck\": {\n            \"status\": \"OK\",\n            \"details\": [\n                \"OK\"\n            ]\n        },\n        \"tlsFallbackScsvSupported\": {\n            \"status\": \"OK\",\n            \"details\": [\n                \"Yes\"\n            ]\n        },\n        \"tlsaDnsRecordConfiguration\": {\n            \"status\": \"Warning\",\n            \"details\": [\n                \"Not configured\"\n            ]\n        },\n        \"debianBlacklistCheck\": {\n            \"status\": \"OK\",\n            \"details\": [\n                \"OK\"\n            ]\n        },\n        \"ocspStaplingEnabled\": {\n            \"status\": \"Warning\",\n            \"details\": [\n                \"No\"\n            ]\n        }\n    }\n}"
+						}
+					]
+				}
+			],
+			"description": "For a given domain name, SSL Configuration Analysis API establishes and tests SSL connection to the host and analyzes how it is configured.\n\nFull API documentation is available [here](https://threatintelligenceplatform.com/threat-intelligence-api-docs/ssl-configuration-analysis-api)."
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "value",
+				"value": "{{api_key}}",
+				"type": "string"
+			},
+			{
+				"key": "key",
+				"value": "apiKey",
+				"type": "string"
+			},
+			{
+				"key": "in",
+				"value": "query",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
