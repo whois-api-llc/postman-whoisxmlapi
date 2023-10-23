@@ -1,10 +1,10 @@
 {
 	"info": {
-		"_postman_id": "fa357a7d-f5fa-407f-83d6-f6a11f0d406e",
+		"_postman_id": "153c8144-8228-4d84-b443-dc433c94306f",
 		"name": "WHOIS XML APIs",
 		"description": "This is a Postman Collection for the WhoisXMLAPI endpoints.\n\nRefer to the [WhoisXMLAPI website](https://whoisxmlapi.com) for more details.\n\nIf you have an API-related question, you can ask them here: [https://main.whoisxmlapi.com/contact-us](https://main.whoisxmlapi.com/contact-us)\n\n## Installation\n\n### Manual install\n\nYou can download this Collection from a GitHub repo here: [https://github.com/whois-api-llc/postman-whoisxmlapi](https://github.com/whois-api-llc/postman-whoisxmlapi)\n\n## Environment\n\nThis Collection includes a pre-configured Environment. You will need to set up the following variables in order to run each request:\n\n| Name | Description |\n| --- | --- |\n| `api_key` | Your API key |",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "24477665"
+		"_exporter_id": "29561787"
 	},
 	"item": [
 		{
@@ -14775,6 +14775,280 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"categories\": [\n        {\n            \"tier1\": {\n                \"confidence\": 0.9830092380340305,\n                \"id\": \"IAB-379\",\n                \"name\": \"News and Politics\"\n            },\n            \"tier2\": {\n                \"confidence\": 0.9231585277273194,\n                \"id\": \"IAB-382\",\n                \"name\": \"International News\"\n            }\n        },\n        {\n            \"tier1\": {\n                \"confidence\": 0.9804531209131508,\n                \"id\": \"IAB-640\",\n                \"name\": \"Television\"\n            },\n            \"tier2\": {\n                \"confidence\": 0.9764381027658146,\n                \"id\": \"IAB-649\",\n                \"name\": \"Holiday TV\"\n            }\n        },\n        {\n            \"tier1\": {\n                \"confidence\": 0.930359005418645,\n                \"id\": \"IAB-379\",\n                \"name\": \"News and Politics\"\n            },\n            \"tier2\": {\n                \"confidence\": 0.980415234706257,\n                \"id\": \"IAB-385\",\n                \"name\": \"National News\"\n            }\n        },\n        {\n            \"tier1\": {\n                \"confidence\": 0.9558710912241889,\n                \"id\": \"IAB-379\",\n                \"name\": \"News and Politics\"\n            },\n            \"tier2\": {\n                \"confidence\": 0.9770380671831367,\n                \"id\": \"IAB-386\",\n                \"name\": \"Politics\"\n            }\n        },\n        {\n            \"tier1\": {\n                \"confidence\": 0.9031173291757225,\n                \"id\": \"IAB-52\",\n                \"name\": \"Business and Finance\"\n            },\n            \"tier2\": {\n                \"confidence\": 0.9167321307419145,\n                \"id\": \"IAB-106\",\n                \"name\": \"Media Industry\"\n            }\n        },\n        {\n            \"tier1\": {\n                \"confidence\": 0.9731062234821247,\n                \"id\": \"IAB-483\",\n                \"name\": \"Sports\"\n            },\n            \"tier2\": null\n        }\n    ],\n    \"domainName\": \"bbc.com\",\n    \"websiteResponded\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "Get categories v3",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://website-categorization.whoisxmlapi.com/api/v3?url=bbc.com",
+							"protocol": "https",
+							"host": [
+								"website-categorization",
+								"whoisxmlapi",
+								"com"
+							],
+							"path": [
+								"api",
+								"v3"
+							],
+							"query": [
+								{
+									"key": "url",
+									"value": "bbc.com",
+									"description": "The website's URL or domain name."
+								},
+								{
+									"key": "minConfidence",
+									"value": "",
+									"description": "The minimum confidence for the predictions.",
+									"disabled": true
+								},
+								{
+									"key": "outputFormat",
+									"value": "",
+									"description": "Response output format. Acceptable values: JSON | XML.",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get categories in XML",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://website-categorization.whoisxmlapi.com/api/v3?url=bbc.com&outputFormat=XML",
+									"protocol": "https",
+									"host": [
+										"website-categorization",
+										"whoisxmlapi",
+										"com"
+									],
+									"path": [
+										"api",
+										"v3"
+									],
+									"query": [
+										{
+											"key": "url",
+											"value": "bbc.com",
+											"description": "The website's URL or domain name."
+										},
+										{
+											"key": "minConfidence",
+											"value": "",
+											"description": "The minimum confidence for the predictions.",
+											"disabled": true
+										},
+										{
+											"key": "outputFormat",
+											"value": "XML",
+											"description": "Response output format. Acceptable values: JSON | XML."
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "xml",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 28 Nov 2022 14:55:16 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/xml"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains; preload"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "strict-origin"
+								},
+								{
+									"key": "Permissions-Policy",
+									"value": "autoplay=(self),fullscreen=(self),geolocation=(self),sync-xhr=(self),payment=(self)"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Report-To",
+									"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=qnrbZLOzEidtsnmuoYrhmRiAqVMSm%2FiiKZlp7DUgQphrPNxY8Lc%2B9MSRfCZM44Y4TEgzJg42f9N4WuKOJqEZebtHhgR2ynDfExDKAat%2BuVqG9DbfCYEC%2Fgj0TDxcqQsZic6nma3ySBOkFzUTqafB%2BfoJ%2Bh0Vgp1a\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+								},
+								{
+									"key": "NEL",
+									"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "CF-RAY",
+									"value": "7713f18c4e719b43-FRA"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								}
+							],
+							"cookie": [],
+							"body": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<xml>\n    <as>\n        <asn>54113</asn>\n        <domain>https://www.fastly.com</domain>\n        <name>FASTLY</name>\n        <route>151.101.0.0/22</route>\n        <type>Content</type>\n    </as>\n    <domainName>bbc.com</domainName>\n    <categories>\n        <category>\n            <confidence>0.99</confidence>\n            <id>63</id>\n            <name>News and Media</name>\n        </category>\n    </categories>\n    <createdDate>1989-07-15T04:00:00+00:00</createdDate>\n    <websiteResponded>1</websiteResponded>\n</xml>"
+						},
+						{
+							"name": "Get categories with confidence greater than 0.9",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://website-categorization.whoisxmlapi.com/api/v3?url=bbc.com&minConfidence=0.9&outputFormat=JSON",
+									"protocol": "https",
+									"host": [
+										"website-categorization",
+										"whoisxmlapi",
+										"com"
+									],
+									"path": [
+										"api",
+										"v3"
+									],
+									"query": [
+										{
+											"key": "url",
+											"value": "bbc.com",
+											"description": "The website's URL or domain name."
+										},
+										{
+											"key": "minConfidence",
+											"value": "0.9",
+											"description": "The minimum confidence for the predictions."
+										},
+										{
+											"key": "outputFormat",
+											"value": "JSON",
+											"description": "Response output format. Acceptable values: JSON | XML."
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 28 Nov 2022 14:56:20 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains; preload"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "strict-origin"
+								},
+								{
+									"key": "Permissions-Policy",
+									"value": "autoplay=(self),fullscreen=(self),geolocation=(self),sync-xhr=(self),payment=(self)"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Report-To",
+									"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=eGsuFxEbNhPQLEWQmk7TcyIPffduB0FZB7PrsFltiEbzTR%2FdyBzg1Dsq32ofLPZHeqgGp2R%2BR0GpvTd4HEcxVkWhQA6ZCSpwhjkhLIxgJekMniuub%2F%2F5vVDI59XkKW1UHyHYXTraGXILlp4QorsT6SMp9LhSz5%2Bn\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+								},
+								{
+									"key": "NEL",
+									"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "CF-RAY",
+									"value": "7713f31f282b9b43-FRA"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"as\": {\n        \"asn\": 54113,\n        \"domain\": \"https://www.fastly.com\",\n        \"name\": \"FASTLY\",\n        \"route\": \"151.101.0.0/22\",\n        \"type\": \"Content\"\n    },\n    \"domainName\": \"bbc.com\",\n    \"categories\": [\n        {\n            \"confidence\": 0.99,\n            \"id\": 63,\n            \"name\": \"News and Media\"\n        }\n    ],\n    \"createdDate\": \"1989-07-15T04:00:00+00:00\",\n    \"websiteResponded\": true\n}"
 						}
 					]
 				}
